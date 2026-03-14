@@ -37,7 +37,7 @@ public class StudentController {
     }
 
     @PostMapping
-    // @RequestBody: Tự động hứng chuỗi JSON từ React gửi lên và "nhào nặn" thành Object Student.
+    // @RequestBody: Tự động bắt chuỗi JSON từ React gửi lên và biến thành Object Student.
     // @Valid: Kích hoạt bộ lọc chặn lỗi (MSSV, Email) bên file Student.java.
     public ResponseEntity<?> add(@Valid @RequestBody Student student) {
         if (repository.existsById(student.getStudentCode())) {
